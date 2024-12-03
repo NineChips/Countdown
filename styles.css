@@ -17,31 +17,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
 }
 
-.countdown {
-    display: flex;
-    justify-content: space-around;
+.countdown-timer {
     font-size: 2rem;
-}
-
-.countdown-item {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 0 10px;
-    transition: transform 0.3s;
-}
-
-.countdown-item:hover {
-    transform: scale(1.1);
-}
-
-.countdown-number {
-    display: block;
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-.countdown-label {
-    font-size: 1rem;
-    text-transform: uppercase;
+    margin-top: 20px;
 }
