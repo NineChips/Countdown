@@ -1,23 +1,88 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    background: url('https://example.com/christmas-background.jpg') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     color: #fff;
+    overflow: hidden;
 }
 
 .countdown-container {
     text-align: center;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .countdown-timer {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background: rgba(0, 128, 0, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.tree {
+    width: 150px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: swing 1s infinite alternate;
+}
+
+@keyframes swing {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    100% { transform: translateX(-50%) rotate(5deg); }
+}
+
+.snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('https://example.com/snow.gif') repeat;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.bells {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background: url('https://example.com/bells.png') no-repeat center center;
+    background-size: contain;
+    animation: ring 1s infinite;
+}
+
+@keyframes ring {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
 }
